@@ -1,0 +1,24 @@
+services:
+  app:
+    build: .
+    container_name: simple-voice-agent
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - OLLAMA_MODEL=llama3.2:3b
+      - WHISPER_MODEL=base
+      - PORT=8000
+    volumes:
+      - ./app:/app/app:ro
+    restart: unless-stopped
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    networks:
+      - voice-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"  # <--- مهم
+networks:
+  voice-network:
+    driver: bridge

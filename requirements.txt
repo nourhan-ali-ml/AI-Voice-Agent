@@ -1,0 +1,24 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Core
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# AI
+ollama==0.1.7
+httpx==0.25.2
+
+# Audio
+numpy==1.24.3
+torch==2.1.2+cpu
+torchaudio==2.1.2+cpu
+openai-whisper==20231117
+gTTS==2.5.1
+pydub==0.25.1
+soundfile==0.12.1
+
+# Utils
+python-dotenv==1.0.0
+loguru==0.7.2
+aiofiles==23.2.1

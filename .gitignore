@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment
+.env
+
+# Generated audio files
+app/output/
+app/uploads/
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Ignore audio files
+*.wav
+*.mp3
+*.m4a
